@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <!-- layouts/_flash_tasks.html.erbの拡張子はいらない -->
+    <!-- ファイル名は_flash_tasksだが、以下では最初の_を除くこと-->
+    <%= render "layouts/flash_tasks" %>
     <%= yield %>
   </body>
 </html>
