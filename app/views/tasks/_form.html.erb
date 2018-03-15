@@ -1,0 +1,21 @@
+<!--パーシャル-->
+<%= form_for(task) do |t| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% task.errors.full_messages.each do |task| %>
+          <li><%= task %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--column stutasを追加したため、以下二行を追加 -->
+  <%= t.label :content, "タスク" %>
+  <%= t.text_field :content %>
+  
+  <%= t.label :status, "ステータス"%>
+  <%= t.text_field :status %>
+
+  <%= t.submit '投稿' %>
+<% end %>
